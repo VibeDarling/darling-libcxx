@@ -1,6 +1,6 @@
 project(libcxx)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -nostdinc -std=c++11 -fvisibility=hidden -fvisibility-inlines-hidden")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -nostdinc -std=c++17 -fvisibility=hidden -fvisibility-inlines-hidden")
 
 include_directories(
 	BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -20,6 +20,9 @@ set(cxx_sources
 	src/condition_variable_destructor.cpp
 	src/debug.cpp
 	src/exception.cpp
+	src/filesystem/directory_iterator.cpp
+	src/filesystem/int128_builtins.cpp
+	src/filesystem/operations.cpp
 	src/format.cpp
 	src/functional.cpp
 	src/future.cpp
