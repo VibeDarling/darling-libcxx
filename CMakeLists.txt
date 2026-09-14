@@ -50,7 +50,9 @@ set(cxx_sources
 	src/valarray.cpp
 	src/variant.cpp
 	src/vector.cpp
+	src/verbose_abort.cpp
 )
+
 
 add_darling_object_library(cxx_obj ${cxx_sources})
 make_fat(cxx_obj)
