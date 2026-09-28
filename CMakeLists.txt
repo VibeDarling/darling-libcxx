@@ -26,6 +26,9 @@ set(cxx_sources
 	src/condition_variable_destructor.cpp
 	src/debug.cpp
 	src/exception.cpp
+	src/filesystem/directory_iterator.cpp
+	src/filesystem/int128_builtins.cpp
+	src/filesystem/operations.cpp
 	src/format.cpp
 	src/functional.cpp
 	src/future.cpp
@@ -61,6 +64,7 @@ set(cxx_sources
 	src/verbose_abort.cpp
 )
 
+
 add_darling_object_library(cxx_obj ${cxx_sources})
 make_fat(cxx_obj)
 
@@ -84,4 +88,3 @@ InstallSymlink("libc++.1.dylib" "${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/lib
 # For dyld only
 add_darling_static_library(cxx_static SOURCES ${cxx_sources})
 make_fat(cxx_static)
-
